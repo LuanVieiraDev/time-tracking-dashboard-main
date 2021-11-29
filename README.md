@@ -17,7 +17,7 @@
 
 ### Links
 
-- Live Site URL: [Aqui](https://your-live-site-url.com)
+- Live Site URL: [Aqui](https://luanvieiradev.github.io/time-tracking-dashboard-main/)
 
 ## Processo
 
