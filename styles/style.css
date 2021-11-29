@@ -1,0 +1,309 @@
+* {
+    padding:0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid: auto max-content / auto;
+    justify-items: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+}
+
+.dashboard {
+    width: 75vw;
+    height: 37.5vw;
+    display: grid;
+    grid: calc(50% - 16px) calc(50% - 16px) / calc(25% - 24px) calc(25% - 24px) calc(25% - 24px) calc(25% - 24px);
+    gap: 32px;
+}
+
+.dashboard__person {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: grid;
+    grid: auto max-content / auto;
+    border-radius: 23px;
+    background-color: hsl(235, 46%, 20%);
+}
+
+.dashboard__person__profile {
+    display:grid;
+    grid: auto auto auto / auto;
+    align-content: start;
+    padding: 32px;
+    border-radius: 23px;
+    background-color: hsl(246, 80%, 60%);
+}
+
+.dashboard__person__img {
+    width: 90px;
+    margin-bottom: 32px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.dashboard__person__phrase {
+    font-size: 0.9rem;
+    color: hsl(236, 100%, 87%);
+}
+
+.dashboard__person__name {
+    font-size: 3vw;
+    font-weight: 300;
+    color:white;
+}
+
+.dashboard__person__options {
+    height: max-content;
+    display: grid;
+    grid: auto auto auto / auto;
+    align-items: start;
+    padding: 32px;
+    row-gap: 16px;
+}
+
+.dashboard__person__option {
+    color: hsl(235, 45%, 61%);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dashboard__person__option:hover {
+    color: white;
+}
+
+.dashboard__person__option.dashboard__person__option--active {
+    color: white;
+}
+
+.dashboard__card__work {
+    background-color: hsl(15, 100%, 70%);
+}
+
+.dashboard__card__play {
+    background-color: hsl(195, 74%, 62%);
+}
+
+.dashboard__card__study {
+    background-color: hsl(348, 100%, 68%);
+}
+
+.dashboard__card__exercise {
+    background-color: hsl(145, 58%, 55%);
+}
+
+.dashboard__card__social {
+    background-color: hsl(264, 64%, 52%);
+}
+
+.dashboard__card__selfcare {
+    background-color: hsl(43, 84%, 65%);
+}
+
+.dashboard__card {
+    position: relative;
+    display: grid;
+    grid: auto / auto;
+    border-radius: 23px;
+    overflow: hidden;
+}
+
+.dashboard__card__icon {
+    position: absolute;
+    top: -5%;
+    right: 5%;
+    height: 25%;
+}
+
+.dashboard__card__info {
+    height: 86%;
+    align-self: end;
+    display: grid;
+    grid: max-content auto max-content / auto auto;
+    justify-items: start;
+    align-items: center;
+    padding: 32px;
+    border-radius: 23px;
+    color: white;
+    background-color: hsl(235, 46%, 20%);
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.dashboard__card__info:hover {
+    background-color: hsl(235, 45%, 61%);
+}
+
+.dashboard__card__name {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.dashboard__card__ellipsis {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: end;
+    margin-bottom: 8px;
+}
+
+.dashboard__card__time {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 3.5vw;
+    font-weight: 300;
+}
+
+.dashboard__card__lasttime {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 0.9rem;
+    color: hsl(236, 100%, 87%);  
+}
+
+.attribution {
+    font-size: 11px; padding: 6px; color: white;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1160px)   {
+    .dashboard {
+        width: 90vw;
+        height: 45vw;
+    }
+}
+
+@media screen and (max-width: 950px)   {
+    .dashboard {
+        width: 95vw;
+        height: 47.5vw;
+        grid: calc(50% - 8px) calc(50% - 8px) / calc(25% - 12px) calc(25% - 12px) calc(25% - 12px) calc(25% - 12px);
+        gap: 16px;
+    }
+
+    .dashboard__person__profile {
+        padding: 22px;
+    }
+
+    .dashboard__person__options {
+        padding: 22px;
+    }
+
+    .dashboard__card__info {
+        padding: 22px;
+    }
+
+    .dashboard__person__img {
+        width: 60px;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        padding-top: 5vh;
+    }
+    
+    .dashboard {
+        width: 90%;
+        grid: 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr;
+        height: max-content;
+        max-height: none;
+    }
+
+    .dashboard__person {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        border-radius: 23px;
+        color: white;
+        background-color: hsl(235, 46%, 20%);
+    }
+    
+    .dashboard__person__profile {
+        height: max-content;
+        grid: auto auto / auto auto;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+    
+    .dashboard__person__img {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;box-sizing: content-box;
+        width: 80px;
+        margin-bottom: 0;
+    }
+    
+    .dashboard__person__phrase {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin-top: none;
+    }
+    
+    .dashboard__person__name {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        font-size: 2rem;
+    }
+    
+    .dashboard__person__options {
+        grid: auto / auto auto auto;
+        justify-content: space-around;
+    }
+
+    .dashboard__card__icon {
+        height: 40%;
+    }
+
+    .dashboard__card__info {
+        height: 80%;
+        grid: auto max-content / auto auto;
+    }
+    
+    .dashboard__card__time {
+        font-size: 2.3rem;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    .dashboard__card__lasttime {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        justify-self: end;
+    }
+
+    .attribution {
+        padding-top: 5vh;
+    }
+}
